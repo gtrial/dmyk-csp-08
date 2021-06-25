@@ -16,7 +16,7 @@ namespace task2
     }
 
     [Serializable]
-    internal class MyClass
+    public class MyClass
     {
         public int X { get; }
         public int Y { get; }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text.Json;
+using task2;
 
 namespace task3
 {
@@ -6,7 +8,8 @@ namespace task3
     {
         private static void Main()
         {
-            Console.WriteLine("Hello World!");
+            if (JsonSerializer.Deserialize(@"{""X"":1,""Y"":2}", typeof(MyClass)) is MyClass myClass)
+                Console.WriteLine(myClass.X + " " + myClass.Y);
         }
     }
 }
